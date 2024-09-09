@@ -14,7 +14,7 @@ If you apply a limit with which Δx goes to 0, you will have the classic express
 
 
 # Derivation of the Notation
-Before we jump to coding practises, I want to give a basic derivation of this notation to make you grasp why this works (you might want to skip this part If you're already familiar with the Riemann sum).
+Before we jump to coding practises, I want to give a basic derivation of this notation to make you grasp why this works (If you are already familiar with the Riemann sum, you may proceed to the section of code examples).
 
 Consider a simple function such as log(x+1)
 ![image](https://github.com/user-attachments/assets/04a2b13f-5f7e-4b39-8411-c944c6f46ae4)
@@ -53,7 +53,7 @@ def parabole(x):
 def integrate(b,f,delta_x):
 	end = (b)/delta_x
 	temp = 0
-	for p in range(0,math.floor(end)+1):
+	for p in range(0,math.floor(end)):
 		temp = temp + (f((p+1)*delta_x)*delta_x)
 	return temp
 
@@ -75,7 +75,7 @@ def parabole(x):
 def integrate(b,f,delta_x):
 	end = (b)/delta_x
 	temp = 0
-	for p in range(0,math.floor(end)+1):
+	for p in range(0,math.floor(end)):
 		if 0>f((p+1)*delta_x):
 			temp = temp + ((-1)*f((p+1)*delta_x)*delta_x)
 			continue
