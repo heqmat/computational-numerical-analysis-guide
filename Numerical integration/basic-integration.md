@@ -1,12 +1,12 @@
 # Introduction
-Integration is not always straight forward operation in mathematics as we all know. There are some kind of functions such as 1/ln(x) for which it's impossible to find a single closed-form solution for its indefinite integral due to its non-continuous nature or something else.
-That's why, we may need to use approximated notations to develop programming algorithms that are supposed to calculate definite integrals of complicated functions sometimes. 
+Integration is not always a straightforward operation in mathematics as we all know. There are some kind of functions such as 1/ln(x) for which it's impossible to find a single closed-form solution for its indefinite integral due to its non-continuous nature or something else.
+That's why, we may need to use numerical analysis methods to develop programming algorithms that are supposed to calculate definite integrals of complicated functions sometimes. 
 
 To approximate definite integral of a function, we can use a very simple notation as follows.
 
 ![image](https://github.com/user-attachments/assets/34fe212e-e931-4248-85fe-6342e1e46f25) ,
 
-where "b" is the point on x-axis to which we want to integrate between b and 0, "Δx" is an infinitesimal which means that less Δx, more accurate result we have.
+where "b" is the point on x-axis which is representing the value we want to integrate between 0, "Δx" is an infinitesimal which means that less Δx, more accurate result we have.
 
 If you apply a limit with which Δx goes to 0, you will have the classic expression of definite integral which means our notation is approximated for definite integrals.
 
@@ -30,7 +30,8 @@ You will realise that If you increase the number of rectangles, you will have mo
 
 ![image](https://github.com/user-attachments/assets/c690512b-16e0-4432-85a1-22c0bb97579e)
 
-Denote Δx as horizontal length of each rectangle and denote "b" as point on x-axis to which we want to integrate just like this.
+Denote Δx as horizontal length of each rectangle and denote "b" as the point on x-axis which is representing the value we want to integrate between 0.
+
 ![image](https://github.com/user-attachments/assets/cd08c2ec-d6a5-475a-82ee-8f47d9640629)
 
 
@@ -40,7 +41,8 @@ If you want to get second rectangle's area, It's "Δx * f(2 * Δx)" and so on.
 If you were to do it for all rectangles in a range between 0 and "b" you will get a notation with sigma sum which is already given in the Introduction part.
 
 # Converting to Code
-Easiest way to calculate definite integral of a function from 0 to b
+Let's say you have a simple function with a formula "x^2" and you want to integrate it between 0 and 3.
+Easiest way to approximate definite integral of this function from 0 to b in Python:
 ```python
 import math
 
@@ -48,17 +50,38 @@ import math
 def parabole(x):
 	return x**2
 
-def integrate(b,f,r):
-	end = (b)/r
+def integrate(b,f,delta_x):
+	end = (b)/delta_x
 	temp = 0
 	for p in range(0,math.floor(end)+1):
-		temp = temp + (f((p+1)*r)*r)
+		temp = temp + (f((p+1)*delta_x)*delta_x)
 	return temp
 
 print(integrate(3,parabole,0.000001)) #output: 9.000013500006666
 ```
+delta_x must be very small just like in the code (0.000001) you can edit this to have a better approximation if it's vital for you.
+If you increase the complexity of function or values, your task will take longer. So if you need to work with extremely big numbers, you may want to use a language like C, C++ rather than python since low-level languages are much faster than high-level ones such as Python.
 
+This approach will approximate exact mathematical value so if you have a negative graph you will have a negative value or if you're integrating a function whose graph lies both above and below the x-axis you will have a subtracted value just like you do in real integrations.
 
+So if you need to calculate areas regardless of their signs and if you want to integrate whole areas as positive. You need a minor edit in the code as follows.
+```python
+import math
 
+#Function we want to integrate
+def parabole(x):
+	return (x**2 - 5)
 
+def integrate(b,f,delta_x):
+	end = (b)/delta_x
+	temp = 0
+	for p in range(0,math.floor(end)+1):
+		if 0>f((p+1)*delta_x):
+			temp = temp + ((-1)*f((p+1)*delta_x)*delta_x)
+			continue
+		temp = temp + (f((p+1)*delta_x)*delta_x)
+	return temp
+
+print(integrate(3,parabole,0.000001)) #output is 8.907123350004452 instead of -5.999991499993089
+```
 
