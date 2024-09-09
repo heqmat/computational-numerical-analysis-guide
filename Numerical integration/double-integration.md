@@ -6,6 +6,6 @@ This notation can be used to approximate double integrals:
 
 where (d,c) and (b,a) are points that represent the range at y or x axises and Δx is infinitesimal which means less Δx, more better approximation you have.
 
-The above expression is equivalent of this expression when a limit is applied as Δx approaches to 0:
+The above expression is equivalent to the expression in the picture when a limit is applied as Δx approaches to 0:
 
 ![image](https://github.com/user-attachments/assets/22f5470c-b593-4401-a215-fe8ce2896ba9)
