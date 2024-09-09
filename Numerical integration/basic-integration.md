@@ -42,7 +42,7 @@ If you were to do it for all rectangles in a range between 0 and "b" you will ge
 
 # Converting to Code
 Let's say you have a simple function with a formula "x^2" and you want to integrate it between 0 and 3.
-Easiest way to approximate definite integral of this function from 0 to b in Python:
+Easiest way to approximate definite integral of this function from 0 to 3 in Python:
 ```python
 import math
 
