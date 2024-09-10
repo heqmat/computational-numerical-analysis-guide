@@ -33,5 +33,25 @@ Now remember we're in search of a notation, so we will need an expression in whi
 
 We know that the horizontal component length of each line segment is Δx while the vertical component length of each line segment that is represented by Δy changes depending on the progress on the x-axis by each Δx. For example, while the first vertical component length of the line segment is f(a + Δx * 1)-f(a + Δx * 0), the length of the vertical component of the second line segment is f(a + Δx * 2) - f(a + Δx * 1), so the difference between the factors of Δx will be 1. is constantly increasing. If we represent this with the sigma sum symbol, we encounter the first notation. I didn't include many mathematical expressions while proving how this works, however, it's quite difficult to make such a explanation as derivation of the notation is more about visual analysis.
 
+# Converting to Code
+Let's say you have an explicit function with a formula "x^2" and you want to find the curve length between the [1,3] interval.
+```python
+import math
 
+def parabole(x):
+	return (x**2)
 
+def arclength(b,a,f,delta_x):
+	end = (b-a)/delta_x
+	temp = 0
+	for p in range(0,math.floor(end)):
+		temp = temp + math.sqrt(delta_x**2+(f(a+delta_x*(p+1))-f(a+delta_x*p))**2)
+	return temp
+
+print(arclength(3,1,parabole,0.000001)) 
+```
+Output is pretty impressive.
+
+Calculated with exact arc length formula:     8.26814590106 
+
+Calculated with numerical integration method: 8.26814590106416
