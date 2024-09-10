@@ -4,7 +4,8 @@ That's why, we may need to use numerical analysis methods to develop programming
 
 To approximate definite integral of a function, we can use a very simple notation as follows.
 
-![image](https://github.com/user-attachments/assets/4fcaeb8e-99e4-4182-a6cf-88b361675a29)
+![image](https://github.com/user-attachments/assets/8e0518a5-6572-4a6d-b677-1e63014ba9a2)
+
 ,
 
 where "b" and "a" are points represent the interval in which we integrate the function, "Δx" is an infinitesimal which means that less Δx, more accurate result we have.
