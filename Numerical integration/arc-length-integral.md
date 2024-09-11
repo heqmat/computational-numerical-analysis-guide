@@ -1,16 +1,21 @@
 Arc length is the distance between two points along a section of a curve. Altough there are formulas for calculating exact arc length of a curve, in most cases, including even simple curves, there are no closed-form solutions for arc length and numerical integration is necessary. Numerical integration of the arc length integral is usually very efficient.
 
-Classical notation for approximating arc length integral as follows.
+A notation for approximating arc length integral as follows.
 
-![image](https://github.com/user-attachments/assets/5897185b-929b-4df5-a2c9-f92dfd6969dd)
+![image](https://github.com/user-attachments/assets/ab84e843-bedb-4632-84c7-9febdafc9add)
+
 
 where the "b" value on the x-axis here represents the maximum value in the range in which the curve length will be calculated, the "a" value represents the smallest value in the range. In other words, this notation tries to approximate the curve length between "b" and "a" on the x-axis. Δx represents the infinitesimal horizontal length of the infinitesimal linear lines that form the curve. So with a smaller Δx we have a better approximation.
 
-If a limit is applied where Δx approaches 0, this notation above is equivalent to the following expression.
+If a limit is applied where Δx approaches 0, this notation above is equivalent to classical formula of arc length.
 
-![image](https://github.com/user-attachments/assets/07fb3d88-ce59-4cfc-9d28-034ebdb2aaa5)
+![equation (3)](https://github.com/user-attachments/assets/8e8521d6-bce6-4421-855c-001eb13f6023)
 
-It would be nice to point out that this formula still works, but it is incredibly difficult, sometimes even impossible, to apply this formula to some functions.
+
+
+
+
+It would be nice to point out that classical arc length integral formula still works, but it is incredibly difficult, sometimes even impossible, to apply this formula to some functions.
 Therefore, we should consider using the approximating notation above.
 
 # Derivation of the Arc Length Notation (why it works)
