@@ -10,6 +10,7 @@ and
 
 If you have no idea about what's that sigma notation for or what's meaning of that delta x. Please first see basic-integration.md file 
 
+# Converting to Code
 Let's assume you want to find Γ(10) which is actually 9!
 ```python
 import math
