@@ -10,7 +10,8 @@ where "b" and "a" are points represent the interval in which we integrate the fu
 
 If you apply a limit as Δx goes to 0, you will have the classic expression of definite integral which means our notation is approximated for definite integrals.
 
-![image](https://github.com/user-attachments/assets/4914d1d3-1b05-4cc3-b3ce-09aec43ebeb2)
+![image](https://github.com/user-attachments/assets/56956f41-af6a-4466-b3a0-922388e1229b)
+
 
 
 
