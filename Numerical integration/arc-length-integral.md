@@ -9,7 +9,8 @@ where the "b" value on the x-axis here represents the maximum value in the range
 
 If a limit is applied where Δx approaches 0, this notation above is equivalent to classical formula of arc length.
 
-![equation (3)](https://github.com/user-attachments/assets/8e8521d6-bce6-4421-855c-001eb13f6023)
+![equation (6)](https://github.com/user-attachments/assets/1e862390-007a-4fa2-abac-974511af3a99)
+
 
 
 
