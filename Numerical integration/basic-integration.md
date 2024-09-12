@@ -4,13 +4,15 @@ That's why, we may need to use numerical analysis methods to develop programming
 
 To approximate definite integral of a function, we can use a very simple notation as follows.
 
-![image](https://github.com/user-attachments/assets/6b89dc1c-1eab-4369-a7fb-608ad4d6d15b),
+![image](https://github.com/user-attachments/assets/d4e03e6f-b9a8-4e27-95e8-8adb785727ed)
+,
 
 where "b" and "a" are points represent the interval in which we integrate the function, "Δx" is an infinitesimal which means that less Δx, more accurate result we have.
 
 If you apply a limit as Δx goes to 0, you will have the classic expression of definite integral which means our notation is approximated for definite integrals.
 
-![image](https://github.com/user-attachments/assets/56956f41-af6a-4466-b3a0-922388e1229b)
+![image](https://github.com/user-attachments/assets/8f6eed32-b335-404c-9fcf-2a2a002f51a4)
+
 
 
 
