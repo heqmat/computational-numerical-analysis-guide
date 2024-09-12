@@ -2,11 +2,16 @@ It's quite possible to approximate the integral of the Gamma function with the n
 
 That's because
 
-![image](https://github.com/user-attachments/assets/7d2790f7-b841-4d9e-8ac9-f239e3c3bc82)
+![image](https://github.com/user-attachments/assets/92d96b9d-abc9-435d-8e91-cf868fc9d396)
+
 
 and
 
-![image](https://github.com/user-attachments/assets/58d47c04-b077-474f-8a9b-2d8e2f6986a0)
+![image](https://github.com/user-attachments/assets/5e7e9889-cd40-4f8d-a1f4-bde33f3bbc36)
+
+
+
+
 
 If you have no idea about what's that sigma notation for or what's meaning of that delta x. Please first see basic-integration.md file 
 
