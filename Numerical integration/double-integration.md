@@ -10,6 +10,7 @@ where (d,c) and (b,a) are points that represent the interval on y or x axises an
 
 The above expression is equivalent to the expression in the picture when a limit is applied as Δx approaches to 0:
 
-![equation (4)](https://github.com/user-attachments/assets/4cddea5e-2971-4f7d-a8b8-f1b164c8d04c)
+![equation (8)](https://github.com/user-attachments/assets/e5ec1d7f-4660-4e32-b4a1-ef2246b938e8)
+
 
 Computing this notation takes extremely long. It's good idea to write the algorithm in an efficient low-level programming language. 
