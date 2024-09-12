@@ -87,52 +87,7 @@ def integrate(b,a,f,delta_x):
 
 print(integrate(3,0,parabole,0.000001)) #output is 8.907123350004452 instead of -5.999991499993089
 ```
-Code can be used even for really complicated integrals like notorious Gamma function. Let's assume you want to find Γ(10) which is actually 9!
-```python
-import math
-
-
-z=10
-#Function we want to integrate
-def gamma(x):
-	return (x**(z-1))*math.e**(-x)
-
-def integrate(b,a,f,delta_x):
-	end = (b-a)/delta_x
-	temp = 0
-	for p in range(0,math.floor(end)):
-		temp = temp + (gamma(a+(p+1)*delta_x)*delta_x)
-	return temp
-
-print(integrate(100,0,gamma,0.000001)) #output: 362879.9999749526 (real value: 362880)
-```
-If you write the program in C++ you can have better approximations in significantly short time.
-
-```cpp
-#include <iostream>
-#include <cmath>
-
-double z = 10;
-
-// Function we want to integrate
-double gamma(double x) {
-    return pow(x, z - 1) * exp(-x);
-}
-
-double integrate(double b, double a, double (*f)(double), double delta_x) {
-    double end = (b - a) / delta_x;
-    double temp = 0.0;
-    for (int p = 0; p < static_cast<int>(floor(end)); p++) {
-        temp += f(a + (p + 1) * delta_x) * delta_x;
-    }
-    return temp;
-}
-
-int main() {
-    std::cout << integrate(500, 0, gamma, 0.000001) << std::endl; // output: 3.6288e+05 (same as real value)
-    return 0;
-}
-```
+Code can be used even for really complicated integrals like notorious the Gamma function. See gamma-function.md file for code examples of approximation of the Gamma function. 
 
 
 
