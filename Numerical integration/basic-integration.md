@@ -92,7 +92,27 @@ print(integrate(3,0,parabole,0.000001)) #output is 8.907123350004452 instead of 
 ```
 Code can be used even for really complicated integrals like notorious the Gamma function. See gamma-function.md file for code examples of approximation of the Gamma function. 
 
+If you want to use a data set as a function graph and then integrate, you need very simple another code:
+```python
+#Example matrix n x 2 (n is 4 in this case)
+matrix = [
+    [1.3,4],
+    [1.6,8],
+    [2,10],
+    [4.3,7.3]
+]
 
+def integrate(matx):
+	temp = 0
+	for x in range(1, len(matx)):
+		horizontal=matx[x][0] - matx[x-1][0]
+		base=matx[x][1]+matx[x-1][1]
+		temp = temp+(base*horizontal)/2
+	return "that's finale output: "+str(temp)
+
+print(integrate(matrix))
+```
+First column of the matrix consists of ```x``` values in the graph while second column of the matrix consists of corresponding ```y``` values in the graph.
 
 
 
