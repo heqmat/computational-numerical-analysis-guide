@@ -37,7 +37,7 @@ print(integrate(100,0,gamma,0.000001)) #output: 362879.9999749526 (real value: 3
 ```
 If you write the program in C++ you can have better approximations in significantly short time.
 
-```cpp
+```c
 #include <iostream>
 #include <cmath>
 
