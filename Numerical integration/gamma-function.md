@@ -33,7 +33,7 @@ def integrate(b,a,f,delta_x):
 		temp = temp + (gamma(a+(p+1)*delta_x)*delta_x)
 	return temp
 
-print(integrate(100,0,gamma,0.000001)) #output: 362879.9999749526 (real value: 362880)
+print(integrate(100,0,gamma,0.000001)) #output: 362879.9999749526 (real value: 362880 which is only 0.0001 higher than approximated value)
 ```
 If you write the program in C++ you can have better approximations in significantly short time.
 
