@@ -1,2 +1,2 @@
 # Numerical Analysis Guide
-This repository is dedicated to discuss derivations of numerical analysis algorithms
+I created this repository to present a collection of my implementations of numerical methods
